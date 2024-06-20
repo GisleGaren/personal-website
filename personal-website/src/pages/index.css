@@ -1,9 +1,52 @@
-.body{
-    background-image: url("../../public/images/profilePic.jpg");
-    background-size: cover; /* Ensures the background image covers the entire container */
+.content{
+    background-color: rgb(193, 240, 255);
     min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
-    background-position: center; /* Centers the background image */
 }
+
+.content-display{
+    padding-top:100px;
+    display:flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.left-column{
+    display:flex;
+    flex-direction: column;
+    max-width:500px;
+}
+
+.right-column{
+    display:flex;
+    flex-direction: column;
+}
+
+.right-column img{
+    width: 500px;
+    height: auto;
+}
+
+.custom-shape-divider-bottom-1718915441 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1718915441 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 225px;
+}
+
+.custom-shape-divider-bottom-1718915441 .shape-fill {
+    fill: #FFF4F4;
+}
+
 
 .body h2{
     margin-top: 5px;

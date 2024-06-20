@@ -3,10 +3,9 @@
 
 // Next.js Initialization: When Next.js initializes, it looks for the _app.tsx file in the pages directory. 
 // If it finds this file, it uses it to wrap all the page components.
-
-
 import { AppProps } from 'next/app';
 import Layout from '../layout';
+import "../styles/globals.css"
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
     return (
