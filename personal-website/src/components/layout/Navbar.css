@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.logo-img{
+    margin-left: 50px;
+    height: auto;
+    width: 200px;
+}
+
+.links{
+    margin-right: 120px;
+    display:flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.links a{
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 20px;
+}
