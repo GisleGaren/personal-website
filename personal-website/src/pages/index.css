@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 .content{
     background-color: rgb(193, 240, 255);
     min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
