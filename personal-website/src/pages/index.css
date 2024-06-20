@@ -1,5 +1,7 @@
 .body{
-    background-color: gray;
+    background-image: url("../../public/images/profilePic.jpg");
+    background-size: cover; /* Ensures the background image covers the entire container */
+    min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
 }
 
 .body h2{
