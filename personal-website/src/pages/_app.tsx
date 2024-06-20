@@ -5,6 +5,7 @@
 // If it finds this file, it uses it to wrap all the page components.
 import { AppProps } from 'next/app';
 import Layout from '../layout';
+import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
     return (
