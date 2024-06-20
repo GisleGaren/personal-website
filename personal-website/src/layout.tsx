@@ -1,4 +1,4 @@
-import { LayoutProps } from "../.next/types/app/layout";
+import { LayoutProps } from "./types/layout";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
