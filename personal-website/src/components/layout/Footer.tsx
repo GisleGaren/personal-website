@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <footer style={{height:"25vh"}}>
+        <footer style={{backgroundColor:"beige"}}>
             <p>© 2021 Personal Website</p>
         </footer>
     );
