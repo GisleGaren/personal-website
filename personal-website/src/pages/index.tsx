@@ -5,18 +5,17 @@ const Home = () => {
     <div className="content">
       <div className="content-display">
         <div className="left-column">
-          left column (Computer Science & A.I Student)
-          <h1>Hi, my name is Gisle!</h1>
+          <h2>STUDENT, DEVELOPER AND ASPIRING DATA ANALYST </h2>
+          <h1>Greetings, my name is Gisle Garen!</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            I am currently working on my MSc in Artificial Intelligence at Denmark's Technical University and have
+            industry experience working as a fullstack developer working with web applications. I am currently interested
+            in pursuing an internship in data engineering and / or analysis!
           </p>
-          <button>Contact Me!</button>
+          <button className="contactButton">Contact Me </button>
         </div>
         <div className="right-column">
-          Right column
-          <img height={"40vh"} width={"40vh"} src="/images/profile.png"></img>
+          <img src="/images/profilePimp.png"></img>
         </div>
       </div>
       <div className="custom-shape-divider-bottom-1718915441">

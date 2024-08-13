@@ -2,13 +2,11 @@
   display: flex;
   margin-top: 20px;
   justify-content: space-between;
-  position: static;
-  z-index: 10;
 }
 .upperWave{
     position: absolute;
     z-index: 1;
-    top:65px;
+    top:60px;
     width: 100vw;
 }
 
@@ -16,6 +14,7 @@
   margin-left: 80px;
   height: auto;
   width: 200px;
+    z-index: 2;
 }
 
 .links {
@@ -34,6 +33,7 @@
   font-size: 22px;
   padding-bottom: 5px;
   height: 27px;
+  z-index: 2;
 }
 
 .links a.active {
