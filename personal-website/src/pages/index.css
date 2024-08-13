@@ -41,22 +41,30 @@
 }   
 
 .contactButton {
+    display: flex; /* Enable Flexbox for the button */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
     border-radius: 50px;
-    max-width: 150px;
+    max-width: 180px;
     width: 100%;
     height: 50px;
     background-color: #002776;
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
   
+  .contactButtonImage {
+    margin-left: 8px; /* Add space between the text and image */
+    width: 20px;
+    height: auto;
+}
+
   .contactButton:hover {
     background-color: #0053cf;
     transform: translateY(-2px);
@@ -106,7 +114,7 @@
 }
 
 .custom-shape-divider-bottom-1718915441 .shape-fill {
-    fill: #FFF4F4;
+    fill: #ffffff;
 }
 
 

@@ -8,11 +8,18 @@ const Home = () => {
           <h2>STUDENT, DEVELOPER AND ASPIRING DATA ANALYST </h2>
           <h1>Greetings, my name is Gisle Garen!</h1>
           <p>
-            I am currently working on my MSc in Artificial Intelligence at Denmark's Technical University and have
-            industry experience working as a fullstack developer working with web applications. I am currently interested
-            in pursuing an internship in data engineering and / or analysis!
+            I am currently working on my MSc in Artificial Intelligence at
+            Denmark's Technical University and have industry experience working
+            as a fullstack developer working with web applications. I am
+            currently interested in pursuing an internship in data engineering
+            and / or analysis!
           </p>
-          <button className="contactButton">Contact Me </button>
+          <div className="buttonContainer">
+            <button className="contactButton">
+              Contact Me
+              <img src="/images/Mail.png" className="contactButtonImage" alt="Mail Icon"></img>
+            </button>
+          </div>
         </div>
         <div className="right-column">
           <img src="/images/profilePimp.png"></img>
