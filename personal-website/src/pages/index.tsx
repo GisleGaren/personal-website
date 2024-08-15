@@ -1,36 +1,10 @@
 import "./index.css";
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Home = () => {
   return (
     <div className="content">
-      <div className="content-display">
-        <div className="left-column">
-          <h2>STUDENT, DEVELOPER AND ASPIRING DATA ANALYST </h2>
-          <h1>Greetings, my name is Gisle Garen!</h1>
-          <p>
-            I am currently working on my MSc in Artificial Intelligence at
-            Denmark's Technical University and have industry experience working
-            as a fullstack developer working with web applications. I am
-            currently interested in pursuing an internship in data engineering
-            and / or analysis!
-          </p>
-          <div className="buttonContainer">
-            <button className="contactButton">
-              Contact Me
-              <img
-                src="/images/Mail.png"
-                className="contactButtonImage"
-                alt="Mail Icon"
-              />
-            </button>
-          </div>
-        </div>
-        <div className="right-column">
-          <img src="/images/profilePimp.png" />
-        </div>
-      </div>
       <div className="custom-shape-divider-bottom-1718915441">
         <svg
           data-name="Layer 1"
@@ -54,21 +28,76 @@ const Home = () => {
           />
         </svg>
       </div>
+      <div className="content-display">
+        <div className="left-column">
+          <h2>STUDENT, DEVELOPER AND ASPIRING DATA ANALYST </h2>
+          <h1>Greetings, my name is Gisle Garen!</h1>
+          <p>
+            I am currently working on my M.Sc in Artificial Intelligence at
+            Denmark's Technical University and have industry experience working
+            as a fullstack developer working with web applications. I am
+            currently interested in pursuing an internship in data engineering
+            and / or analysis!
+          </p>
+          <div className="buttonContainer">
+            <button className="contactButton">
+              Contact Me
+              <img
+                src="/images/Mail.png"
+                className="contactButtonImage"
+                alt="Mail Icon"
+              />
+            </button>
+          </div>
+        </div>
+        <div className="right-column">
+          <img src="/images/profilePimp.png" />
+          <div className="topLeftThingy">
+            <div>img</div>
+            <div>Number</div>
+            <div>Content</div>
+          </div>
+          <div className="midRightThingy"><div>img</div>
+            <div>Number</div>
+            <div>Content</div></div>
+          <div className="bottomLeftThingy"><div>img</div>
+            <div>Number</div>
+            <div>Content</div></div>
+        </div>
+      </div>
       <div className="about">
         <h1>About Myself</h1>
       </div>
       <div className="about-content">
         <div className="left-about">
-          <h2>My Background</h2>
-          <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
-            <li>Hi mama how are you?</li>
+          <h2>General Information</h2>
+          <ul className="faqList">
+            <li>
+              <span>B.Sc in Computer Science @ OsloMet</span>
+            </li>
+            <li>
+              <span>M.Sc in Artificial Intelligence @ DTU</span>
+            </li>
+            <li>
+              <span>Treasurer at OSI Gruppedans</span>
+            </li>
+            <li>
+              <span>
+                Technical Experience in fullstack development at NAV and
+                Sparebank1
+              </span>
+            </li>
           </ul>
         </div>
         <div className="right-about">
-          <Carousel width={500} autoPlay interval={8000} infiniteLoop showThumbs={false}>
+          <Carousel
+            width={500}
+            autoPlay
+            interval={8000}
+            infiniteLoop
+            showThumbs={false}
+            showStatus
+          >
             <div>
               <img src="/images/profile.png" />
               <p>Heihei</p>
