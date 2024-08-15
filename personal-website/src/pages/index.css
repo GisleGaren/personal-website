@@ -62,7 +62,7 @@ body, html {
 .topLeftThingy {
   position: absolute;
   top: 40%;
-  left: 5vh;
+  left: 2vh;
 }
 
 .midRightThingy {
@@ -119,4 +119,32 @@ body, html {
   background-color: rgb(193, 240, 255);
   padding: 10px;
   color: #002776;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: adds a slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Reset transform */
+  }
+}
+
+.topLeftThingy, .midRightThingy, .bottomLeftThingy {
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1s forwards; /* Apply fadeIn animation */
+}
+
+.topLeftThingy {
+  animation-delay: 0s; /* First element appears immediately */
+}
+
+.midRightThingy {
+  animation-delay: 1s; /* Second element appears after 1 second */
+}
+
+.bottomLeftThingy {
+  animation-delay: 2s; /* Third element appears after 2 seconds */
 }

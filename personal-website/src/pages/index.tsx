@@ -20,18 +20,18 @@ const Home = () => {
             currently interested in pursuing an internship in data engineering
             and / or analysis!
           </p>
-          <Button imageUrl="/images/Mail.png" content="Contact Me"></Button>
+          <Button imageUrl="/images/Mail.png" content="Contact Me"/>
         </div>
         <div className="right-column">
           <img src="/images/profilePimp.png" />
           <div className="topLeftThingy">
-            <Tag tagContent="Year Student" tagIconUrl="/images/education.png" tagNumber="4th"></Tag>
+            <Tag tagContent="Year Student" tagIconUrl="/images/education.png" tagNumber="4th"/>
           </div>
           <div className="midRightThingy">
-            <Tag tagIconUrl="/images/work.png" tagNumber="2" tagContent="Internships"></Tag>
+            <Tag tagIconUrl="/images/work.png" tagNumber="2" tagContent="Internships"/>
           </div>
           <div className="bottomLeftThingy">
-            <Tag tagIconUrl="/images/location.png" tagNumber="" tagContent="Copenhagen"></Tag>
+            <Tag tagIconUrl="/images/location.png" tagNumber="" tagContent="Copenhagen"/>
           </div>
         </div>
       </div>
