@@ -1,7 +1,7 @@
 .content {
   background-color: rgb(193, 240, 255);
   width: 100vw;
-  height:100vh;
+  height: calc(100vh - 83px);
 }
 
 .content-display {
@@ -9,7 +9,8 @@
   display: flex;
   justify-content: center;
   gap: 5vw;
-  position:relative;
+  position: relative;
+  height: 100vh;
 }
 
 .left-column {
@@ -85,9 +86,9 @@
 }
 
 .right-column {
-  position:relative;
+  position: relative;
   width: 40vw;
-  height:40vh;
+  height: 40vh;
 }
 
 .right-column img {
@@ -97,76 +98,27 @@
   z-index: 3;
 }
 
-.topLeftThingy{
-    position:absolute;
-    top:40%;
-    left:5vh;
-    z-index: 4;
-    background-color: white;
-    width:10vw;
-    height: 5vh;
-    border-radius: 10px;
-    display:flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.midRightThingy{
-    position: absolute;
-    top:70%;
-    left:35vw;
-    background-color: white;
-    height:5vh;
-    border-radius: 10px;
-    display:flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.bottomLeftThingy{
-    position: absolute;
-    top:130%;
-    left:20%;
-    background-color: white;
-    height:5vh;
-    border-radius: 10px;
-    display:flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.custom-shape-divider-bottom-1718915441 {
+.topLeftThingy {
   position: absolute;
-  z-index: 0;
-  width: 100%;
-  bottom: 0;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
+  top: 40%;
+  left: 5vh;
 }
 
-.custom-shape-divider-bottom-1718915441 svg {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 225px;
+.midRightThingy {
+  position: absolute;
+  top: 70%;
+  left: 35vw;
 }
 
-.custom-shape-divider-bottom-1718915441 .shape-fill {
-  fill: #ffffff;
-}
-
-.body h2 {
-  margin-top: 5px;
+.bottomLeftThingy {
+  position: absolute;
+  top: 130%;
+  left: 20%;
 }
 
 .about {
-  margin-top: 20vh;
+  margin-top: -15vh;
   padding-bottom: 5vh;
-  padding-top: 10vh;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -195,16 +147,16 @@
 }
 
 .faqList {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style-type: none;
-    padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.faqList li span{
-    display: inline-block;
-    background-color: rgb(193, 240, 255);
-    padding: 10px;
-    color: #002776;
+.faqList li span {
+  display: inline-block;
+  background-color: rgb(193, 240, 255);
+  padding: 10px;
+  color: #002776;
 }

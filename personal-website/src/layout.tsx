@@ -9,7 +9,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div>
       <Navbar />
         {children}
-      <Footer />
+      
     </div>
   );
 }
