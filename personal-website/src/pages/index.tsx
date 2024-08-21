@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { LowerWave } from "@/components/shapes/lowerWave/LowerWave";
 import { Button } from "@/components/functionality/button/Button";
 import { Tag } from "@/components/other/tags/tag";
+import { BottomWave } from "@/components/shapes/bottomWave/BottomWave";
 
 const Home = () => {
   return (
@@ -40,7 +41,6 @@ const Home = () => {
       </div>
       <div className="about-content">
         <div className="left-about">
-          <h2>General Information</h2>
           <ul className="faqList">
             <li>
               <span>B.Sc in Computer Science @ OsloMet</span>
@@ -49,7 +49,7 @@ const Home = () => {
               <span>M.Sc in Artificial Intelligence @ DTU</span>
             </li>
             <li>
-              <span>Treasurer at OSI Gruppedans</span>
+              <span>Treasurer and dancer at OSI Gruppedans</span>
             </li>
             <li>
               <span>
@@ -57,11 +57,21 @@ const Home = () => {
                 Sparebank1
               </span>
             </li>
+            <li>
+              <span>
+                5+ years working as a shoe store employee specializing in quality goodyearwelted footwear!
+              </span>
+            </li>
+            <li>
+              <span>
+                Currently trying out table tennis at DTU Sport
+              </span>
+            </li>
           </ul>
         </div>
         <div className="right-about">
           <Carousel
-            width={500}
+            width={600}
             autoPlay
             interval={8000}
             infiniteLoop
@@ -70,14 +80,13 @@ const Home = () => {
           >
             <div>
               <img src="/images/profile.png" />
-              <p>Heihei</p>
             </div>
             <div>
               <img src="/images/profilePimp.png" alt="" />
-              <p>yoyo</p>
             </div>
           </Carousel>
         </div>
+        <BottomWave></BottomWave>
       </div>
     </div>
   );

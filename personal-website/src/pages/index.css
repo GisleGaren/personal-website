@@ -85,35 +85,58 @@
   color: #002776;
 }
 .about-content {
+  position:relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: white;
+  gap:8vw;
+  padding-bottom: 7vh;
 }
 .left-about {
   display: flex;
   flex-direction: column;
-  max-width: 40vw;
+  z-Index:3;
 }
 
-.left-about h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 4vh;
-  color: #002776;
+.right-about{
+  z-index: 3;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border:10px;
 }
 
 .faqList {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
+  display:flex;
+  flex-direction: column;
+  gap:2vh;
+}
+
+.faqList li {
+  background-color: rgba(255, 255, 255); /* Light grey background */
+  margin-bottom: 8px; /* Space between items */
+  padding: 15px 20px; /* Padding inside items */
+  border: 5px solid #005AA4; /* Blue accent border */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  width:30vw;
+}
+
+.faqList li:hover {
+  background-color: #f0f0f0; /* Lighter grey on hover */
+  transform: translateY(-2px) scale(1.1); /* Slight raise */
+  box-shadow: 8px 8px 12px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
 }
 
 .faqList li span {
   display: inline-block;
-  background-color: rgb(193, 240, 255);
-  padding: 10px;
-  color: #002776;
+  font-size: 22px; /* Larger font size */
+  font-weight: bold; /* Bolder font weight */
+  color: #000000; /* Blue text color */
 }
 
 @keyframes fadeIn {
