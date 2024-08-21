@@ -81,15 +81,14 @@
 .about h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 5vh;
-  font-style: italic;
-  color: #002776;
+  color: #000000;
 }
 .about-content {
   position:relative;
   display: flex;
   justify-content: center;
   background-color: white;
-  gap:8vw;
+  gap:10vw;
   padding-bottom: 7vh;
 }
 .left-about {
@@ -116,6 +115,7 @@
 }
 
 .faqList li {
+  display: inline-block;
   background-color: rgba(255, 255, 255); /* Light grey background */
   margin-bottom: 8px; /* Space between items */
   padding: 15px 20px; /* Padding inside items */
@@ -124,19 +124,15 @@
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   width:30vw;
+  font-size: 22px; /* Larger font size */
+  font-weight: bold; /* Bolder font weight */
+  color: #000000; /* Blue text color */
 }
 
 .faqList li:hover {
   background-color: #f0f0f0; /* Lighter grey on hover */
-  transform: translateY(-2px) scale(1.1); /* Slight raise */
+  transform: translateY(-2px) scale(1.15); /* Slight raise */
   box-shadow: 8px 8px 12px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
-}
-
-.faqList li span {
-  display: inline-block;
-  font-size: 22px; /* Larger font size */
-  font-weight: bold; /* Bolder font weight */
-  color: #000000; /* Blue text color */
 }
 
 @keyframes fadeIn {

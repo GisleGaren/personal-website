@@ -21,18 +21,30 @@ const Home = () => {
             currently interested in pursuing an internship in data engineering
             and / or analysis!
           </p>
-          <Button imageUrl="/images/Mail.png" content="Contact Me"/>
+          <Button imageUrl="/images/Mail.png" content="Contact Me" />
         </div>
         <div className="right-column">
           <img src="/images/profilePimp.png" />
           <div className="topLeftThingy">
-            <Tag tagContent="Year Student" tagIconUrl="/images/education.png" tagNumber="4th"/>
+            <Tag
+              tagContent="Year Student"
+              tagIconUrl="/images/education.png"
+              tagNumber="4th"
+            />
           </div>
           <div className="midRightThingy">
-            <Tag tagIconUrl="/images/work.png" tagNumber="2" tagContent="Internships"/>
+            <Tag
+              tagIconUrl="/images/work.png"
+              tagNumber="2"
+              tagContent="Internships"
+            />
           </div>
           <div className="bottomLeftThingy">
-            <Tag tagIconUrl="/images/location.png" tagNumber="" tagContent="Copenhagen"/>
+            <Tag
+              tagIconUrl="/images/location.png"
+              tagNumber=""
+              tagContent="Copenhagen"
+            />
           </div>
         </div>
       </div>
@@ -42,30 +54,17 @@ const Home = () => {
       <div className="about-content">
         <div className="left-about">
           <ul className="faqList">
+            <li>B.Sc in Computer Science @ OsloMet</li>
+            <li>M.Sc in Artificial Intelligence @ DTU</li>
+            <li>Originally based in Oslo, Norway</li>
+            <li>Treasurer and dancer at OSI Gruppedans</li>
             <li>
-              <span>B.Sc in Computer Science @ OsloMet</span>
+              Technical Experience in fullstack development at NAV and
+              Sparebank1
             </li>
             <li>
-              <span>M.Sc in Artificial Intelligence @ DTU</span>
-            </li>
-            <li>
-              <span>Treasurer and dancer at OSI Gruppedans</span>
-            </li>
-            <li>
-              <span>
-                Technical Experience in fullstack development at NAV and
-                Sparebank1
-              </span>
-            </li>
-            <li>
-              <span>
-                5+ years working as a shoe store employee specializing in quality goodyearwelted footwear!
-              </span>
-            </li>
-            <li>
-              <span>
-                Currently trying out table tennis at DTU Sport
-              </span>
+              More than 5 years working as a shoe store employee specializing in quality
+              goodyearwelted footwear!
             </li>
           </ul>
         </div>
