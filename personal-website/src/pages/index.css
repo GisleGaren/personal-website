@@ -16,10 +16,69 @@
   display: flex;
   flex-direction: column;
   width: 35vw;
+  margin-top: 2vh;
+}
+
+.rotating-text {
+  margin-top: 1vh;
+  height: 9vh;
+  overflow: hidden;
+}
+
+.rotating-text h1 {
+  margin-top: 0;
+}
+
+.restofHeader{
+  margin-top: -1vh;
+}
+
+.rotating-text h1 span {
+  position: relative;
+  animation: animation 12s ease forwards;
+  animation-delay: 1.5s;
+  top:-1vh;
+}
+
+.alizarin {
+  color: #e74c3c;
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.peter-river {
+  color: #3498db;
+}
+
+.emerald {
+  color: #2ecc71;
+}
+
+.sun-flower {
+  color: #f1c40f;
+}
+
+@keyframes animation {
+  0% {
+    top: -1vh;
+  }
+  20% {
+    top: -10vh;
+  }
+  40% {
+    top: -19vh;
+  }
+  60% {
+    top: -28vh;
+  }
+  100% {
+    top: -37vh;
+  }
 }
 
 .left-column h1 {
-  margin-top: 1vh;
   font-size: 9vh;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1;
@@ -84,55 +143,12 @@
   color: #000000;
 }
 .about-content {
-  position:relative;
+  position: relative;
   display: flex;
   justify-content: center;
   background-color: white;
-  gap:10vw;
+  gap: 10vw;
   padding-bottom: 7vh;
-}
-.left-about {
-  display: flex;
-  flex-direction: column;
-  z-Index:3;
-}
-
-.right-about{
-  z-index: 3;
-  background-color: #ffffff;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border:10px;
-}
-
-.faqList {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-  display:flex;
-  flex-direction: column;
-  gap:2vh;
-}
-
-.faqList li {
-  display: inline-block;
-  background-color: rgba(255, 255, 255); /* Light grey background */
-  margin-bottom: 8px; /* Space between items */
-  padding: 15px 20px; /* Padding inside items */
-  border: 5px solid #005AA4; /* Blue accent border */
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 10px;
-  width:30vw;
-  font-size: 22px; /* Larger font size */
-  font-weight: bold; /* Bolder font weight */
-  color: #000000; /* Blue text color */
-}
-
-.faqList li:hover {
-  background-color: #f0f0f0; /* Lighter grey on hover */
-  transform: translateY(-2px) scale(1.15); /* Slight raise */
-  box-shadow: 8px 8px 12px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
 }
 
 @keyframes fadeIn {
@@ -146,7 +162,9 @@
   }
 }
 
-.topLeftThingy, .midRightThingy, .bottomLeftThingy {
+.topLeftThingy,
+.midRightThingy,
+.bottomLeftThingy {
   opacity: 0; /* Start hidden */
   animation: fadeIn 1s forwards; /* Apply fadeIn animation */
 }

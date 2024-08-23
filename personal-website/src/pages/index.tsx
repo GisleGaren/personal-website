@@ -1,10 +1,9 @@
 import "./index.css";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { LowerWave } from "@/components/shapes/lowerWave/LowerWave";
 import { Button } from "@/components/functionality/button/Button";
 import { Tag } from "@/components/other/tags/tag";
-import { BottomWave } from "@/components/shapes/bottomWave/BottomWave";
+import { PathShape } from "@/components/shapes/path/pathShape";
 
 const Home = () => {
   return (
@@ -13,7 +12,16 @@ const Home = () => {
       <div className="content-display">
         <div className="left-column">
           <h2>STUDENT, DEVELOPER AND ASPIRING DATA ANALYST </h2>
-          <h1>Greetings, my name is Gisle Garen!</h1>
+          <div className="rotating-text"> 
+            <h1>
+              <span className="word alizarin">Greetings,</span> <br/>
+              <span className="word wisteria">God dag,</span> <br/>
+              <span className="word peter-river">Bonjour,</span> <br/>
+              <span className="word sun-flower">Guten tag,</span> <br/>
+              <span className="word alizarin">Greetings,</span> <br/>
+            </h1>
+          </div>
+          <h1 className="restofHeader">my name is Gisle Garen!</h1>
           <p>
             I am currently working on my M.Sc in Artificial Intelligence at
             Denmark's Technical University and have industry experience working
@@ -52,40 +60,7 @@ const Home = () => {
         <h1>About Myself</h1>
       </div>
       <div className="about-content">
-        <div className="left-about">
-          <ul className="faqList">
-            <li>B.Sc in Computer Science @ OsloMet</li>
-            <li>M.Sc in Artificial Intelligence @ DTU</li>
-            <li>Originally based in Oslo, Norway</li>
-            <li>Treasurer and dancer at OSI Gruppedans</li>
-            <li>
-              Technical Experience in fullstack development at NAV and
-              Sparebank1
-            </li>
-            <li>
-              More than 5 years working as a shoe store employee specializing in quality
-              goodyearwelted footwear!
-            </li>
-          </ul>
-        </div>
-        <div className="right-about">
-          <Carousel
-            width={600}
-            autoPlay
-            interval={8000}
-            infiniteLoop
-            showThumbs={false}
-            showStatus
-          >
-            <div>
-              <img src="/images/profile.png" />
-            </div>
-            <div>
-              <img src="/images/profilePimp.png" alt="" />
-            </div>
-          </Carousel>
-        </div>
-        <BottomWave></BottomWave>
+        <PathShape></PathShape>
       </div>
     </div>
   );
