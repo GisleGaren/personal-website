@@ -1,5 +1,6 @@
 import "./index.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useState, useEffect, useRef } from "react";
 import { LowerWave } from "@/components/shapes/lowerWave/LowerWave";
 import { Button } from "@/components/functionality/button/Button";
 import { Tag } from "@/components/other/tags/tag";
@@ -7,6 +8,69 @@ import { PathShape } from "@/components/shapes/path/pathShape";
 import { SneakPeek } from "@/components/other/sneakPeek/SneakPeek";
 
 const Home = () => {
+  // State to control the visibility of each SneakPeek
+  const [visible, setVisible] = useState({
+    first: false,
+    second: false,
+    third: false,
+    fourth: false,
+    fifth: false,
+    sixth: false,
+  });
+
+  // Refs for each SneakPeek container
+  const firstRef = useRef(null);
+  const secondRef = useRef(null);
+  const thirdRef = useRef(null);
+  const fourthRef = useRef(null);
+  const fifthRef = useRef(null);
+  const sixthRef = useRef(null);
+  // Repeat for each SneakPeek
+
+  useEffect(() => {
+    let delay = 0; // Starting delay in milliseconds
+    const delayIncrement = 500; // Incremental delay for each subsequent image
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const target = entry.target as HTMLElement;
+          const id = target.dataset.id;
+          if (entry.isIntersecting && id) {
+            setTimeout(() => {
+              setVisible((prev) => ({ ...prev, [id]: true }));
+            }, delay);
+            delay += delayIncrement; // Increase delay for the next image
+            observer.unobserve(entry.target); // Stop observing the current target
+          }
+        });
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0.1, // Adjust based on when you want the component to become visible
+      }
+    );
+
+    const elements = [
+      firstRef,
+      secondRef,
+      thirdRef,
+      fourthRef,
+      fifthRef,
+      sixthRef,
+    ];
+    elements.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      // Cleanup the observer on component unmount
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="content">
       <LowerWave></LowerWave>
@@ -63,23 +127,55 @@ const Home = () => {
       </div>
       <div className="about-content">
         <PathShape />
-        <div className="firstImg">
-          <SneakPeek imgUrl="/images/chad.jpeg" />
+        <div
+          ref={firstRef}
+          data-id="first"
+          className={`firstImg ${visible.first ? "visible" : ""}`}
+        >
+          {visible.first && <SneakPeek imgUrl="/images/chad.jpeg" />}
         </div>
-        <div className="secondImg">
-          <SneakPeek imgUrl="/images/bachelorCelebration.jpg" />
+        <div
+          ref={secondRef}
+          data-id="second"
+          className={`secondImg ${visible.second ? "visible" : ""}`}
+        >
+          {visible.second && (
+            <SneakPeek imgUrl="/images/bachelorCelebration.jpg" />
+          )}
         </div>
-        <div className="thirdImg">
-          <SneakPeek imgUrl="/images/dagestadGroupPhoto.jpg" />
+        <div
+          ref={thirdRef}
+          data-id="third"
+          className={`thirdImg ${visible.third ? "visible" : ""}`}
+        >
+          {visible.third && (
+            <SneakPeek imgUrl="/images/dagestadGroupPhoto.jpg" />
+          )}
         </div>
-        <div className="fourthImg">
-          <SneakPeek imgUrl="/images/summerInternship.jpg" />
+        <div
+          ref={fourthRef}
+          data-id="fourth"
+          className={`fourthImg ${visible.fourth ? "visible" : ""}`}
+        >
+          {visible.fourth && (
+            <SneakPeek imgUrl="/images/summerInternship.jpg" />
+          )}
         </div>
-        <div className="fifthImg">
-          <SneakPeek imgUrl="/images/roskilde.jpg" />
+        <div
+          ref={fifthRef}
+          data-id="fifth"
+          className={`fifthImg ${visible.fifth ? "visible" : ""}`}
+        >
+          {visible.fifth && <SneakPeek imgUrl="/images/roskilde.jpg" />}
         </div>
-        <div className="sixthImg">
-          <SneakPeek imgUrl="/images/analogPhotography.jpg" />
+        <div
+          ref={sixthRef}
+          data-id="sixth"
+          className={`sixthImg ${visible.sixth ? "visible" : ""}`}
+        >
+          {visible.sixth && (
+            <SneakPeek imgUrl="/images/analogPhotography.jpg" />
+          )}
         </div>
       </div>
     </div>

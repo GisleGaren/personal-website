@@ -193,6 +193,16 @@
   top: 15vh;
 }
 
+.firstImg, .secondImg, .thirdImg, .fourthImg, .fifthImg, .sixthImg {
+  opacity: 0;  /* Initially hide the images */
+  transition: opacity 2s ease-out;
+}
+
+/* Additional CSS to turn the opacity to 1 when the images are set to be visible */
+.firstImg.visible, .secondImg.visible, .thirdImg.visible, .fourthImg.visible, .fifthImg.visible, .sixthImg.visible {
+  opacity: 1;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
