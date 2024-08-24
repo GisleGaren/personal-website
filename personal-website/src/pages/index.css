@@ -195,12 +195,21 @@
 
 .firstImg, .secondImg, .thirdImg, .fourthImg, .fifthImg, .sixthImg {
   opacity: 0;  /* Initially hide the images */
-  transition: opacity 2s ease-out;
+  transition: opacity 3s ease-out, transform 0.3s ease ;
 }
 
 /* Additional CSS to turn the opacity to 1 when the images are set to be visible */
 .firstImg.visible, .secondImg.visible, .thirdImg.visible, .fourthImg.visible, .fifthImg.visible, .sixthImg.visible {
   opacity: 1;
+}
+
+.firstImg.expanded,
+.secondImg.expanded,
+.thirdImg.expanded,
+.fourthImg.expanded,
+.fifthImg.expanded,
+.sixthImg.expanded {
+  transform: scale(1.25);
 }
 
 @keyframes fadeIn {

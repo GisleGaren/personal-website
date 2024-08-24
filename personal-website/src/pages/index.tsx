@@ -8,6 +8,8 @@ import { PathShape } from "@/components/shapes/path/pathShape";
 import { SneakPeek } from "@/components/other/sneakPeek/SneakPeek";
 
 const Home = () => {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
   // State to control the visibility of each SneakPeek
   const [visible, setVisible] = useState({
     first: false,
@@ -26,6 +28,10 @@ const Home = () => {
   const fifthRef = useRef(null);
   const sixthRef = useRef(null);
   // Repeat for each SneakPeek
+
+  const handleExpand = (id: string) => {
+    setExpanded((prev) => (prev === id ? null : id));
+  };
 
   useEffect(() => {
     let delay = 0; // Starting delay in milliseconds
@@ -130,7 +136,8 @@ const Home = () => {
         <div
           ref={firstRef}
           data-id="first"
-          className={`firstImg ${visible.first ? "visible" : ""}`}
+          className={`firstImg ${visible.first ? "visible" : ""} ${expanded === "first" ? "expanded" : ""}`}
+          onClick={() => handleExpand("first")}
         >
           {visible.first && <SneakPeek imgUrl="/images/chad.jpeg" />}
         </div>
