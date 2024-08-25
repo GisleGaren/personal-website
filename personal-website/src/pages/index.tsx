@@ -199,14 +199,13 @@ const Home = () => {
           padding={10}
           content={
             <PopoverContent
-              imgUrl="/images/chad.jpeg"
-              headerText="Fuck"
-              pText="Heihei"
+              imgUrl="/images/bachelorCelebration.jpg"
+              headerText="Bachelor Thesis Celebration"
+              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
             />
           }
         >
           <div
-            ref={secondRef}
             data-id="second"
             className={`secondImg ${visible.second ? "visible" : ""} ${
               expanded === "second" ? "expanded" : ""
@@ -220,8 +219,20 @@ const Home = () => {
             )}
           </div>
         </Popover>
-        <div
+        <Popover
           ref={thirdRef}
+          isOpen={isPopoverOpen.third}
+          positions={["right"]}
+          padding={10}
+          content={
+            <PopoverContent
+              imgUrl="/images/dagestadGroupPhoto.jpg"
+              headerText="My days as a Shoe Salesman"
+              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+            />
+          }
+        >
+        <div
           data-id="third"
           className={`thirdImg ${visible.third ? "visible" : ""} ${
             expanded === "third" ? "expanded" : ""
@@ -232,8 +243,21 @@ const Home = () => {
             <SneakPeek imgUrl="/images/dagestadGroupPhoto.jpg" />
           )}
         </div>
-        <div
+        </Popover>
+        <Popover
           ref={fourthRef}
+          isOpen={isPopoverOpen.fourth}
+          positions={["left"]}
+          padding={10}
+          content={
+            <PopoverContent
+              imgUrl="/images/summerInternship.jpg"
+              headerText="My internship as a Fullstack Developer"
+              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+            />
+          }
+        >
+        <div
           data-id="fourth"
           className={`fourthImg ${visible.fourth ? "visible" : ""} ${
             expanded === "fourth" ? "expanded" : ""
@@ -244,8 +268,21 @@ const Home = () => {
             <SneakPeek imgUrl="/images/summerInternship.jpg" />
           )}
         </div>
-        <div
+        </Popover>
+        <Popover
           ref={fifthRef}
+          isOpen={isPopoverOpen.fifth}
+          positions={["left"]}
+          padding={10}
+          content={
+            <PopoverContent
+              imgUrl="/images/roskilde.jpg"
+              headerText="Me at Roskilde Festival"
+              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+            />
+          }
+        >
+        <div
           data-id="fifth"
           className={`fifthImg ${visible.fifth ? "visible" : ""} ${
             expanded === "fifth" ? "expanded" : ""
@@ -254,6 +291,20 @@ const Home = () => {
         >
           {visible.fifth && <SneakPeek imgUrl="/images/roskilde.jpg" />}
         </div>
+        </Popover>
+        <Popover
+          ref={sixthRef}
+          isOpen={isPopoverOpen.sixth}
+          positions={["left"]}
+          padding={10}
+          content={
+            <PopoverContent
+              imgUrl="/images/analogPhotography.jpg"
+              headerText="I also enjoy analog photography"
+              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+            />
+          }
+        >
         <div
           ref={sixthRef}
           data-id="sixth"
@@ -266,6 +317,7 @@ const Home = () => {
             <SneakPeek imgUrl="/images/analogPhotography.jpg" />
           )}
         </div>
+        </Popover>
       </div>
     </div>
   );

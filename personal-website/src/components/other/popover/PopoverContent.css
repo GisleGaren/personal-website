@@ -16,7 +16,7 @@
   border-radius: 50px; /* Apply the same border-radius to the image */
   filter: brightness(60%); /* Darken the image */
 }
-.text {
+.text-popover {
   position: absolute; /* Position text absolutely inside the popover */
   width: 80%; /* Make the text container span the entire popover */
   height: 90%; /* Make the text container span the entire popover */
@@ -24,4 +24,7 @@
   color: white; /* Text color for visibility on the darkened background */
   font-size: 2vh; /* Adjust the font size as needed */
   z-index: 1; /* Ensure the text is above the image */
+}
+.text-popover p{
+  width: 80%; /* Make the text container span the entire popover */
 }

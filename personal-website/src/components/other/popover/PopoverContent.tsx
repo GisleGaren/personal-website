@@ -9,7 +9,7 @@ type PopoverContentProps = {
 export const PopoverContent = ({ imgUrl, headerText, pText}: PopoverContentProps) => {
   return (
     <div className="popover">
-      <div className="text">
+      <div className="text-popover">
         <h1>{headerText}</h1>
         <p>
           {pText}
