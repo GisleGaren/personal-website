@@ -6,9 +6,11 @@ import { Button } from "@/components/functionality/button/Button";
 import { Tag } from "@/components/other/tags/tag";
 import { PathShape } from "@/components/shapes/path/pathShape";
 import { SneakPeek } from "@/components/other/sneakPeek/SneakPeek";
+import { Popover } from "@navikt/ds-react";
 
 const Home = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [openState, setOpenState] = useState(false);
 
   // State to control the visibility of each SneakPeek
   const [visible, setVisible] = useState({
@@ -136,15 +138,23 @@ const Home = () => {
         <div
           ref={firstRef}
           data-id="first"
-          className={`firstImg ${visible.first ? "visible" : ""} ${expanded === "first" ? "expanded" : ""}`}
-          onClick={() => handleExpand("first")}
+          className={`firstImg ${visible.first ? "visible" : ""} ${
+            expanded === "first" ? "expanded" : ""
+          }`}
+          onClick={() => {
+            handleExpand("first");
+            setOpenState(!openState);
+          }}
         >
           {visible.first && <SneakPeek imgUrl="/images/chad.jpeg" />}
         </div>
         <div
           ref={secondRef}
           data-id="second"
-          className={`secondImg ${visible.second ? "visible" : ""}`}
+          className={`secondImg ${visible.second ? "visible" : ""} ${
+            expanded === "second" ? "expanded" : ""
+          }`}
+          onClick={() => handleExpand("second")}
         >
           {visible.second && (
             <SneakPeek imgUrl="/images/bachelorCelebration.jpg" />
@@ -153,7 +163,10 @@ const Home = () => {
         <div
           ref={thirdRef}
           data-id="third"
-          className={`thirdImg ${visible.third ? "visible" : ""}`}
+          className={`thirdImg ${visible.third ? "visible" : ""} ${
+            expanded === "third" ? "expanded" : ""
+          }`}
+          onClick={() => handleExpand("third")}
         >
           {visible.third && (
             <SneakPeek imgUrl="/images/dagestadGroupPhoto.jpg" />
@@ -162,7 +175,10 @@ const Home = () => {
         <div
           ref={fourthRef}
           data-id="fourth"
-          className={`fourthImg ${visible.fourth ? "visible" : ""}`}
+          className={`fourthImg ${visible.fourth ? "visible" : ""} ${
+            expanded === "fourth" ? "expanded" : ""
+          }`}
+          onClick={() => handleExpand("fourth")}
         >
           {visible.fourth && (
             <SneakPeek imgUrl="/images/summerInternship.jpg" />
@@ -171,20 +187,35 @@ const Home = () => {
         <div
           ref={fifthRef}
           data-id="fifth"
-          className={`fifthImg ${visible.fifth ? "visible" : ""}`}
+          className={`fifthImg ${visible.fifth ? "visible" : ""} ${
+            expanded === "fifth" ? "expanded" : ""
+          }`}
+          onClick={() => handleExpand("fifth")}
         >
           {visible.fifth && <SneakPeek imgUrl="/images/roskilde.jpg" />}
         </div>
         <div
           ref={sixthRef}
           data-id="sixth"
-          className={`sixthImg ${visible.sixth ? "visible" : ""}`}
+          className={`sixthImg ${visible.sixth ? "visible" : ""} ${
+            expanded === "sixth" ? "expanded" : ""
+          }`}
+          onClick={() => handleExpand("sixth")}
         >
           {visible.sixth && (
             <SneakPeek imgUrl="/images/analogPhotography.jpg" />
           )}
         </div>
       </div>
+      <Popover
+        open={openState}
+        onClose={() => setOpenState(false)}
+        anchorEl={firstRef.current}
+        placement="right"
+      >
+        {" "}
+        <Popover.Content>Innhold her!</Popover.Content>{" "}
+      </Popover>
     </div>
   );
 };

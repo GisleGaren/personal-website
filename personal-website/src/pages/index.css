@@ -209,7 +209,7 @@
 .fourthImg.expanded,
 .fifthImg.expanded,
 .sixthImg.expanded {
-  transform: scale(1.25);
+  transform: scale(1.1);
 }
 
 @keyframes fadeIn {
