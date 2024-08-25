@@ -29,7 +29,7 @@
   margin-top: 0;
 }
 
-.restofHeader{
+.restofHeader {
   margin-top: -1vh;
 }
 
@@ -37,7 +37,7 @@
   position: relative;
   animation: animation 12s ease forwards;
   animation-delay: 1.5s;
-  top:-1vh;
+  top: -1vh;
 }
 
 .alizarin {
@@ -137,7 +137,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:0.5vw;
+  gap: 0.5vw;
 }
 .about h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -152,54 +152,64 @@
   gap: 10vw;
   padding-bottom: 7vh;
 }
-.textUnderAbout{
-  position:absolute;
-  top:10vh;
+.textUnderAbout {
+  position: absolute;
+  top: 10vh;
   max-width: 30vw;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.firstImg{
-  position:absolute;
-  left:5vw;
+.firstImg {
+  position: absolute;
+  left: 5vw;
   top: 10vh;
 }
 
-.secondImg{
-  position:absolute;
-  left:20vw;
+.secondImg {
+  position: absolute;
+  left: 20vw;
   top: 30vh;
 }
 
-.thirdImg{
-  position:absolute;
-  left:35vw;
+.thirdImg {
+  position: absolute;
+  left: 35vw;
 }
 
-.fourthImg{
-  position:absolute;
-  left:50vw;
+.fourthImg {
+  position: absolute;
+  left: 50vw;
   top: 20vh;
 }
 
-.fifthImg{
-  position:absolute;
-  left:65vw;
+.fifthImg {
+  position: absolute;
+  left: 65vw;
 }
 
-.sixthImg{
-  position:absolute;
-  left:80vw;
+.sixthImg {
+  position: absolute;
+  left: 80vw;
   top: 15vh;
 }
 
-.firstImg, .secondImg, .thirdImg, .fourthImg, .fifthImg, .sixthImg {
-  opacity: 0;  /* Initially hide the images */
-  transition: opacity 3s ease-out, transform 0.3s ease ;
+.firstImg,
+.secondImg,
+.thirdImg,
+.fourthImg,
+.fifthImg,
+.sixthImg {
+  opacity: 0; /* Initially hide the images */
+  transition: opacity 3s ease-out, transform 0.3s ease;
 }
 
 /* Additional CSS to turn the opacity to 1 when the images are set to be visible */
-.firstImg.visible, .secondImg.visible, .thirdImg.visible, .fourthImg.visible, .fifthImg.visible, .sixthImg.visible {
+.firstImg.visible,
+.secondImg.visible,
+.thirdImg.visible,
+.fourthImg.visible,
+.fifthImg.visible,
+.sixthImg.visible {
   opacity: 1;
 }
 
@@ -209,7 +219,13 @@
 .fourthImg.expanded,
 .fifthImg.expanded,
 .sixthImg.expanded {
+  height: 18vh;
+  width: 18vh;
   transform: scale(1.1);
+  border-radius: 10vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(65, 65, 65, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 @keyframes fadeIn {

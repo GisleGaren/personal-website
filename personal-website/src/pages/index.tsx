@@ -6,11 +6,20 @@ import { Button } from "@/components/functionality/button/Button";
 import { Tag } from "@/components/other/tags/tag";
 import { PathShape } from "@/components/shapes/path/pathShape";
 import { SneakPeek } from "@/components/other/sneakPeek/SneakPeek";
-import { Popover } from "@navikt/ds-react";
+import { Popover } from "react-tiny-popover";
+import { PopoverContent } from "@/components/other/popover/PopoverContent";
 
 const Home = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
-  const [openState, setOpenState] = useState(false);
+
+  const [isPopoverOpen, setIsPopoverOpen] = useState({
+    first: false,
+    second: false,
+    third: false,
+    fourth: false,
+    fifth: false,
+    sixth: false,
+  });
 
   // State to control the visibility of each SneakPeek
   const [visible, setVisible] = useState({
@@ -31,8 +40,31 @@ const Home = () => {
   const sixthRef = useRef(null);
   // Repeat for each SneakPeek
 
-  const handleExpand = (id: string) => {
+  type PopoverId = "first" | "second" | "third" | "fourth" | "fifth" | "sixth";
+
+  const handleExpand = (id: PopoverId) => {
     setExpanded((prev) => (prev === id ? null : id));
+    setIsPopoverOpen((prev) => {
+      const newState = {
+        first: false,
+        second: false,
+        third: false,
+        fourth: false,
+        fifth: false,
+        sixth: false,
+      };
+  
+      // If the clicked popover is already open, close it
+      if (prev[id]) {
+        return newState; // Close all popovers
+      }
+  
+      // Otherwise, open the clicked popover
+      return {
+        ...newState,
+        [id]: true,
+      };
+    });
   };
 
   useEffect(() => {
@@ -135,31 +167,59 @@ const Home = () => {
       </div>
       <div className="about-content">
         <PathShape />
-        <div
+        <Popover
           ref={firstRef}
-          data-id="first"
-          className={`firstImg ${visible.first ? "visible" : ""} ${
-            expanded === "first" ? "expanded" : ""
-          }`}
-          onClick={() => {
-            handleExpand("first");
-            setOpenState(!openState);
-          }}
+          isOpen={isPopoverOpen.first}
+          positions={["right"]}
+          padding={10}
+          content={
+            <PopoverContent
+              imgUrl="/images/chad.jpeg"
+              headerText="OSI Gruppedans"
+              pText="Heihei"
+            />
+          }
         >
-          {visible.first && <SneakPeek imgUrl="/images/chad.jpeg" />}
-        </div>
-        <div
+          <div
+            data-id="first"
+            className={`firstImg ${visible.first ? "visible" : ""} ${
+              expanded === "first" ? "expanded" : ""
+            }`}
+            onClick={() => {
+              handleExpand("first");
+            }}
+          >
+            {visible.first && <SneakPeek imgUrl="/images/chad.jpeg" />}
+          </div>
+        </Popover>
+        <Popover
           ref={secondRef}
-          data-id="second"
-          className={`secondImg ${visible.second ? "visible" : ""} ${
-            expanded === "second" ? "expanded" : ""
-          }`}
-          onClick={() => handleExpand("second")}
+          isOpen={isPopoverOpen.second}
+          positions={["top"]}
+          padding={10}
+          content={
+            <PopoverContent
+              imgUrl="/images/chad.jpeg"
+              headerText="Fuck"
+              pText="Heihei"
+            />
+          }
         >
-          {visible.second && (
-            <SneakPeek imgUrl="/images/bachelorCelebration.jpg" />
-          )}
-        </div>
+          <div
+            ref={secondRef}
+            data-id="second"
+            className={`secondImg ${visible.second ? "visible" : ""} ${
+              expanded === "second" ? "expanded" : ""
+            }`}
+            onClick={() => {
+              handleExpand("second");
+            }}
+          >
+            {visible.second && (
+              <SneakPeek imgUrl="/images/bachelorCelebration.jpg" />
+            )}
+          </div>
+        </Popover>
         <div
           ref={thirdRef}
           data-id="third"
@@ -207,15 +267,6 @@ const Home = () => {
           )}
         </div>
       </div>
-      <Popover
-        open={openState}
-        onClose={() => setOpenState(false)}
-        anchorEl={firstRef.current}
-        placement="right"
-      >
-        {" "}
-        <Popover.Content>Innhold her!</Popover.Content>{" "}
-      </Popover>
     </div>
   );
 };
