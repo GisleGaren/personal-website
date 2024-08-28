@@ -1,4 +1,4 @@
-import "./BottomWave.module.css";
+import "./BottomWave.css";
 
 export const BottomWave = () => {
   return (

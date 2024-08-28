@@ -1,4 +1,4 @@
-import "./Button.module.css"
+import "./Button.css"
 
 type ButtonProps = {
     imageUrl: string;
