@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "./Navbar.module.css";
 import { useRouter } from "next/router";
 
 const Navbar = () => {
