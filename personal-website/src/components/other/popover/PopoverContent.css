@@ -1,0 +1,44 @@
+.popover {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50px; /* Apply rounded corners */
+  overflow: hidden; /* Ensure content stays within the rounded corners */
+  position: relative; /* Set to relative to position text absolutely inside */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popover img {
+  width: 100%; /* Make the image fit the container */
+  height: 100%; /* Make the image fit the container */
+  object-fit: cover; /* Ensure the image covers the entire area while maintaining aspect ratio */
+  border-radius: 50px; /* Apply the same border-radius to the image */
+  filter: brightness(25%); /* Darken the image */
+  transition: filter 0.3s ease; /* Add a smooth transition effect */
+}
+
+.popover img.no-filter {
+  filter: brightness(100%); /* Reset brightness when text is hidden */
+}
+
+.text-popover {
+  position: absolute; /* Position text absolutely inside the popover */
+  width: 80%; /* Make the text container span the entire popover */
+  height: 90%; /* Make the text container span the entire popover */
+  align-items: center;
+  color: white; /* Text color for visibility on the darkened background */
+  font-size: 2vh; /* Adjust the font size as needed */
+  z-index: 1; /* Ensure the text is above the image */
+}
+
+.text-popover.hidden {
+  display: none; /* Hide the text when not visible */
+}
+.text-popover p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
