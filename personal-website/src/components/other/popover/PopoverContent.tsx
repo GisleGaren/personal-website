@@ -1,5 +1,6 @@
-import "./PopoverContent.css";
+import "./PopoverContent.module.css";
 import { useState } from "react";
+
 type PopoverContentProps = {
   imgUrl: string;
   headerText: string;

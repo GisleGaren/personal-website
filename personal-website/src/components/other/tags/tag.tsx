@@ -1,4 +1,4 @@
-import "./tag.css";
+import "./tag.module.css";
 
 type tagProps = {
   tagIconUrl: string;

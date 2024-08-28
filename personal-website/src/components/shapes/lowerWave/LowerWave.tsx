@@ -1,4 +1,4 @@
-import "./LowerWave.css"
+import "./LowerWave.module.css"
 
 export const LowerWave = () => {
     return (

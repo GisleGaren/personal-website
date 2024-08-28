@@ -1,4 +1,4 @@
-import "./SneakPeek.css";
+import "./SneakPeek.module.css";
 
 type SneakPeekProps = {
     imgUrl: string;
