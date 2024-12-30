@@ -132,7 +132,7 @@ const Home = () => {
             Denmark's Technical University and have industry experience working
             as a fullstack developer working with web applications. I am
             currently interested in pursuing an internship in data engineering
-            and / or analytics!
+            and / or analytics! heyyoyoyoyo!!!!!asdfas a 141326237169
           </p>
           <Button imageUrl="/images/Mail.png" content="Contact Me" />
         </div>

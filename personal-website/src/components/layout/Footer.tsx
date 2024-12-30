@@ -14,7 +14,7 @@ const Footer = () => {
                     <img height={35} width={35} src="../../../images/facebook.png" alt="Facebook Icon" />
                 </a>
             </div>
-            <p>© 2024 Gisle Garen's personal website</p>
+            <p>© 2024 Gisle Garen's personal website asdsgsdg123asd</p>
         </footer>
     );
 }
