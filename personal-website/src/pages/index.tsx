@@ -132,7 +132,7 @@ const Home = () => {
             Denmark's Technical University and have industry experience working
             as a fullstack developer working with web applications. I am
             currently interested in pursuing an internship in data engineering
-            and / or analytics! heyyoyoyoyo!!!!!asdfas a 141326237169
+            and / or analytics!
           </p>
           <Button imageUrl="/images/Mail.png" content="Contact Me" />
         </div>
@@ -176,7 +176,10 @@ const Home = () => {
             <PopoverContent
               imgUrl="/images/chad.jpeg"
               headerText="OSI Gruppedans"
-              pText="Heihei"
+              pText="Next to my studies, I volunteered as a treasurer for OSI Gruppedans for two years. 
+              I was responsible for the financial management of the group. 
+              
+              Most of my dancing was in HipHop and every semester ended with a show, where we showcased our choreographies. "
             />
           }
         >
@@ -201,7 +204,9 @@ const Home = () => {
             <PopoverContent
               imgUrl="/images/bachelorCelebration.jpg"
               headerText="Bachelor Thesis Celebration"
-              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+              pText="Completed my B.Eng in Computer Science at the Oslo Metropolitan University in the spring of 2024
+              My bachelor thesis was about the development of a web application for a case managers at the Norwegian Labour and Welfare Administration
+              to effectivize their workflow. Final grade: A"
             />
           }
         >
@@ -228,7 +233,8 @@ const Home = () => {
             <PopoverContent
               imgUrl="/images/dagestadGroupPhoto.jpg"
               headerText="My days as a Shoe Salesman"
-              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+              pText="Next to my studies, I worked as a shoe salesman part time at Skomaker Dagestad for a little over 5 years. Our products
+              were specialized classic footwear made using a goodyearwelted construction where we took in reparations. "
             />
           }
         >
@@ -253,7 +259,9 @@ const Home = () => {
             <PopoverContent
               imgUrl="/images/summerInternship.jpg"
               headerText="My internship as a Fullstack Developer"
-              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+              pText="In the summer of 2024, I had my first technical internship as a software intern at Sparebank1 and 
+              worked on project where we created a wrapped application for a customer's consumption patterns. Most of the project
+              was done in React and Node.js."
             />
           }
         >
@@ -278,7 +286,7 @@ const Home = () => {
             <PopoverContent
               imgUrl="/images/roskilde.jpg"
               headerText="Me at Roskilde Festival"
-              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+              pText="I also enjoy music festivals"
             />
           }
         >
@@ -301,7 +309,7 @@ const Home = () => {
             <PopoverContent
               imgUrl="/images/analogPhotography.jpg"
               headerText="I also enjoy analog photography"
-              pText="afhglfhgsjdhgskfdhgshdfjksghjdfhsjkldgshflghsfdhgskdfhkhfhjk"
+              pText="I have recently bought a Canon A-1 analog camera and am currently experimenting with various films and lenses."
             />
           }
         >
