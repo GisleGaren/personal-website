@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans:wght@400;600&display=swap');
+
 .wrapper{
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.wrapper h1 {
+    font-family: Permanent Marker, Work Sans, sans-serif;
+    font-size: 2.75rem;
+    margin-bottom: 2vh;
+    background-color: rgb(193, 240, 255);
+    padding: 1vh 1vw 1vh 1vw;
 }
 
 .cv-content{
@@ -12,12 +22,57 @@
 }
 
 .cv-section {
-    display:flex;
+    display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    gap: 2vw;
+    position: relative;
+}
+
+/* Left column: date */
+.cv-date {
+    width: 15vw;
+    text-align: right;
+    color: #878787;
+    font-family: 'Work Sans', sans-serif;
+    padding-top:1vh;
+}
+
+/* Middle column: vertical line */
+.cv-line {
+    position: relative;
+    width: 0.1vw;
+    height:15vh;
+    background-color: #bebebe;
+    margin-top:2.5vh;
+}
+
+/* Circle (the "ball thingy") */
+.cv-dot {
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Right column: job details */
+.cv-description {
+    font-family: 'Work Sans', sans-serif;
+    padding-top:1vh;
 }
 
 .headline-section{
     display:flex;
     justify-content: center;
     margin-top:5vh;
+    background-color: rgb(193, 240, 255);
+    font-family: Permanent Marker,Work Sans,sans-serif;
+    padding: 1vh 1vw 1vh 1vw;
+    font-size: 1.25rem;
 }
