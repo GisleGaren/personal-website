@@ -1,26 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans:wght@400;600&display=swap');
 
-.wrapper{
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.wrapper h1 {
-    font-family: Permanent Marker, Work Sans, sans-serif;
-    font-size: 2.75rem;
-    margin-bottom: 2vh;
-    background-color: rgb(193, 240, 255);
-    padding: 1vh 1vw 1vh 1vw;
-}
-
-.cv-content{
-    display:flex;
-    flex-direction: column;
-    gap:2.5vh;
-}
-
 .cv-section {
     display: flex;
     flex-direction: row;
@@ -29,7 +8,6 @@
     position: relative;
 }
 
-/* Left column: date */
 .cv-date {
     width: 15vw;
     text-align: right;
@@ -38,16 +16,14 @@
     padding-top:1vh;
 }
 
-/* Middle column: vertical line */
 .cv-line {
     position: relative;
     width: 0.1vw;
-    height:15vh;
+    height:20vh;
     background-color: #ccc;
     margin-top:2.5vh;
 }
 
-/* Circle (the "ball thingy") */
 .cv-dot {
     position: absolute;
     top: 2vh;
@@ -61,10 +37,10 @@
     z-index: 1;
 }
 
-/* Right column: job details */
 .cv-description {
     font-family: 'Work Sans', sans-serif;
     padding-top:1vh;
+    max-width: 16vw;
 }
 
 .cv-description h2 {
@@ -81,12 +57,7 @@
     color: #6e6e6e;
 }
 
-.headline-section{
-    display:flex;
-    justify-content: center;
-    margin-top:5vh;
-    background-color: rgb(193, 240, 255);
-    font-family: Permanent Marker,Work Sans,sans-serif;
-    padding: 1vh 1vw 1vh 1vw;
-    font-size: 1.25rem;
+.company{
+    margin-bottom:0.75vh;
+    font-size:1.1rem;
 }
