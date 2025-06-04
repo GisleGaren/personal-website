@@ -67,6 +67,20 @@
     padding-top:1vh;
 }
 
+.cv-description h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.1vh;
+}
+
+.cv-description p {
+    margin-top:0.05vh;
+}
+
+.description-location{
+    color: #6e6e6e;
+}
+
 .headline-section{
     display:flex;
     justify-content: center;

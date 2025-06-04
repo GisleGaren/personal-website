@@ -14,7 +14,7 @@ const CV = () => {
                     </div>
                     <div className="cv-description">
                         <h2>Junior Dev</h2>
-                        <p>Oslo, Norway</p>
+                        <p className="description-location">Oslo, Norway</p>
                         <p>Fun fun fun fun fun fun </p>
                     </div>
                 </div>
