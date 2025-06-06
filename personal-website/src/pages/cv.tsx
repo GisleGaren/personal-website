@@ -5,7 +5,8 @@ const CV = () => {
     return (
         <div className="wrapper">
             <h1>Curriculum Vitae</h1>
-            <p>So far I have yada yada yada yada yada </p>
+            <p className="cv-desc">At the present date, I am currently enrolled in a M.Sc program in Artificial Intelligence at the Technical University of Denmark, 
+                where I have gone through the first year year. This builds upon my foundation in Computer Science basics, where I  </p>
             <div className="headline-section">Work Life</div>
             <div className="cv-content">
                 <CVContent
