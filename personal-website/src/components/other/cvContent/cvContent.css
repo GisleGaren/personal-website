@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans:wght@400;600&display=swap');
+
+.cv-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2vw;
+    position: relative;
+}
+
+.cv-date {
+    width: 15vw;
+    text-align: right;
+    color: #878787;
+    font-family: 'Work Sans', sans-serif;
+    padding-top:1vh;
+}
+
+.cv-line {
+    position: relative;
+    width: 0.1vw;
+    height:20vh;
+    background-color: #ccc;
+    margin-top:2.5vh;
+}
+
+.cv-dot {
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.cv-description {
+    font-family: 'Work Sans', sans-serif;
+    padding-top:1vh;
+    max-width: 16vw;
+}
+
+.cv-description h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.1vh;
+}
+
+.cv-description p {
+    margin-top:0.05vh;
+}
+
+.description-location{
+    color: #6e6e6e;
+}
+
+.company{
+    margin-bottom:0.75vh;
+    font-size:1.1rem;
+}
