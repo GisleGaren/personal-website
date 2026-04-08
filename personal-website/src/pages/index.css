@@ -257,3 +257,90 @@
 .bottomLeftThingy {
   animation-delay: 2s; /* Third element appears after 2 seconds */
 }
+
+/* ── Mobile styles ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .content-display {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6vh;
+    gap: 2vh;
+    padding-bottom: 4vh;
+  }
+
+  .left-column {
+    width: 88vw;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-column h1 {
+    font-size: 13vw;
+  }
+
+  .left-column h2 {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .rotating-text {
+    height: 13vw;
+  }
+
+  .rotating-text h1 span {
+    top: 0;
+  }
+
+  @keyframes animation {
+    0%   { top: 0; }
+    20%  { top: -13vw; }
+    40%  { top: -26vw; }
+    60%  { top: -39vw; }
+    100% { top: -52vw; }
+  }
+
+  .right-column {
+    width: 88vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right-column img {
+    width: 72vw;
+  }
+
+  .topLeftThingy,
+  .midRightThingy,
+  .bottomLeftThingy {
+    display: none;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px 16px 32px;
+    gap: 20px;
+    justify-items: center;
+    height: auto;
+    min-height: 0;
+  }
+
+  /* Hide the decorative path shape on mobile */
+  .about-content > div:first-child {
+    display: none;
+  }
+
+  .firstImg,
+  .secondImg,
+  .thirdImg,
+  .fourthImg,
+  .fifthImg,
+  .sixthImg {
+    position: static;
+    left: auto;
+    top: auto;
+    min-width: 18vh;
+    min-height: 18vh;
+  }
+}

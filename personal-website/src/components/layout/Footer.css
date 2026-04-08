@@ -17,3 +17,16 @@
     margin-top: 0;
     color:white;
 }
+
+@media (max-width: 768px) {
+  .feet {
+    height: auto;
+    padding: 24px 16px;
+  }
+
+  .feet div {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

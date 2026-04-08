@@ -447,3 +447,40 @@
   transform: translateY(0);
   box-shadow: 0 4px 12px rgba(0, 39, 118, 0.2);
 }
+
+/* ── Mobile styles ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding-top: 8vh;
+    padding-bottom: 180px;
+  }
+
+  .contact-main {
+    padding: 36px 20px 60px;
+  }
+
+  .contact-columns {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-left {
+    padding: 32px 24px 28px;
+  }
+
+  .profile-photo {
+    width: 260px;
+  }
+
+  .badge-available {
+    left: -10px;
+  }
+
+  .badge-edu {
+    right: -10px;
+  }
+
+  .badge-location {
+    right: -10px;
+  }
+}

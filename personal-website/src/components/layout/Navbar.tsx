@@ -1,30 +1,43 @@
 import "./Navbar.css";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Navbar = () => {
   const router = useRouter();
   const { pathname } = router;
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav>
       <div className="navbar">
         <img className="logo-img" src="/images/signature.png" alt="Signature" />
-        <div className="links">
-          <a href="/" className={pathname === "/" ? "active" : ""}>
+        <button
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div className={`links ${menuOpen ? "menu-open" : ""}`}>
+          <a href="/" className={pathname === "/" ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Home
           </a>
-          <a href="/cv" className={pathname === "/cv" ? "active" : ""}>
+          <a href="/cv" className={pathname === "/cv" ? "active" : ""} onClick={() => setMenuOpen(false)}>
             CV
           </a>
           <a
             href="/projects"
             className={pathname === "/projects" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
           >
             Projects
           </a>
           <a
             href="/contact"
             className={pathname === "/contact" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
           >
             Contact Me
           </a>

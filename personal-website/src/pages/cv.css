@@ -256,3 +256,21 @@
   background-color: #002776;
   color: white;
 }
+
+/* ── Mobile styles ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cv-hero {
+    padding-top: 8vh;
+    padding-bottom: 180px;
+  }
+
+  .cv-main {
+    padding: 40px 0 60px;
+  }
+
+  .cv-columns {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 32px;
+  }
+}
