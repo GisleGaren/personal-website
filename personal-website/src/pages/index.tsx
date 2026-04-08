@@ -163,7 +163,7 @@ const Home = () => {
       </div>
       <div className="about">
         <img height={50} width={50} src="/images/star.png" />
-        <h1>About Me</h1>
+        <h1>Glimpse of my life</h1>
       </div>
       <div className="about-content">
         <PathShape />

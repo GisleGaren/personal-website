@@ -1,0 +1,258 @@
+/* ── Page ──────────────────────────────────────────────────── */
+.cv-page {
+  background-color: white;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.cv-hero {
+  position: relative;
+  background-color: rgb(193, 240, 255);
+  padding-top: 14vh;
+  padding-bottom: 240px; /* room for the wave (225px tall) */
+  text-align: center;
+  overflow: hidden;
+}
+
+.cv-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #002776;
+  opacity: 0;
+  margin: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.cv-name {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: #002776;
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.cv-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background-color: #002776;
+  animation: expandLine 0.6s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.cv-tagline {
+  font-size: 1rem;
+  color: #002776;
+  opacity: 0;
+  margin: 8px 0 0;
+  letter-spacing: 0.5px;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.cv-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: rgba(0, 39, 118, 0.65);
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.85s;
+}
+
+.cv-meta-dot {
+  opacity: 0.4;
+}
+
+/* ── Hero animations ───────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandLine {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* ── Main content ──────────────────────────────────────────── */
+.cv-main {
+  background-color: white;
+  padding: 60px 0 80px;
+}
+
+.cv-columns {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.cv-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* ── Sections ──────────────────────────────────────────────── */
+.cv-section-title {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #002776;
+  margin: 0 0 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #002776;
+}
+
+/* ── Timeline entries ──────────────────────────────────────── */
+.cv-entry {
+  background: white;
+  border-left: 4px solid #002776;
+  border-radius: 0 10px 10px 0;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 14px rgba(0, 39, 118, 0.08);
+  opacity: 0;
+  transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.25s ease;
+}
+
+.cv-entry:hover {
+  box-shadow: 0 6px 24px rgba(0, 39, 118, 0.14);
+  transform: translateX(4px) !important;
+}
+
+.cv-entry.slide-left {
+  transform: translateX(-28px);
+}
+
+.cv-entry.slide-right {
+  transform: translateX(28px);
+}
+
+.cv-entry.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cv-period {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #002776;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.cv-entry-title {
+  font-size: 1rem;
+  margin: 0 0 3px;
+  color: #111;
+}
+
+.cv-org {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.cv-entry-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #555;
+  margin: 0;
+}
+
+/* ── Tags ──────────────────────────────────────────────────── */
+.cv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.cv-tag {
+  background-color: rgb(193, 240, 255);
+  color: #002776;
+  font-size: 0.72rem;
+  padding: 3px 11px;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* ── Skills ────────────────────────────────────────────────── */
+.cv-skill-group {
+  margin-bottom: 18px;
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.cv-skill-group.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cv-skill-category {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #002776;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+
+.cv-skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cv-skill-pill {
+  background-color: white;
+  color: #002776;
+  border: 1.5px solid #002776;
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 0.85rem;
+  cursor: default;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cv-skill-pill:hover {
+  background-color: #002776;
+  color: white;
+}
